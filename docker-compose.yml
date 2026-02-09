@@ -88,8 +88,8 @@ services:
     env_file:
       - .env
     environment:
-      #- DATABASE_URL=postgresql+psycopg2://postgres:${DB_PASSWORD:-postgres}@postgres:5432/zentrya_db
-      #- REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=postgresql+psycopg2://postgres:${DB_PASSWORD:-postgres}@postgres:5432/zentrya_db
+      - REDIS_URL=redis://redis:6379/0
       - TZ=Africa/Dar_es_Salaam
       - DEBUG=True
       - ENVIRONMENT=development
@@ -123,7 +123,7 @@ services:
     env_file:
       - .env.production
     environment:
-      #- DATABASE_URL=postgresql+psycopg2://postgres:${DB_PASSWORD:-postgres}@postgres:5432/zentrya_db
+      - DATABASE_URL=postgresql+psycopg2://postgres:${DB_PASSWORD:-postgres}@postgres:5432/zentrya_db
       - REDIS_URL=redis://redis:6379/0
       - TZ=Africa/Dar_es_Salaam
       - DEBUG=False

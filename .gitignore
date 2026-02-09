@@ -95,6 +95,7 @@ celerybeat-schedule
 # =================================
 .env
 .env.prod
+.env.production
 env.prod
 .venv/
 env/
@@ -147,3 +148,5 @@ uploads/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+fly.toml
