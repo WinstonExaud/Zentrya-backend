@@ -1,0 +1,79 @@
+# ----------------------------
+# Core API
+# ----------------------------
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+pydantic[email]==2.5.0
+pydantic-settings==2.1.0
+gunicorn==21.2.0
+
+# ----------------------------
+# Database + Migrations
+# ----------------------------
+sqlalchemy==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9     # sync Postgres driver
+asyncpg==0.29.0            # async Postgres driver (if you migrate to async)
+
+# ----------------------------
+# Redis
+# ----------------------------
+redis==5.0.1
+hiredis==2.2.3
+
+# ----------------------------
+# Auth & Security
+# ----------------------------
+passlib[bcrypt]==1.7.4
+argon2-cffi>=21.2.0
+python-jose==3.3.0
+cryptography>=41.0.0
+
+# ----------------------------
+# HTTP (Async)
+# ----------------------------
+aiohttp==3.9.2           # async downloads / internal calls
+httpx==0.25.2              # async HTTP client (great for APIs)
+
+# ----------------------------
+# Storage (S3 / Cloudflare R2)
+# ----------------------------
+boto3==1.40.61
+botocore==1.40.61
+aioboto3==15.5.0
+
+# ----------------------------
+# Firebase
+# ----------------------------
+firebase-admin==6.3.0
+python-magic==0.4.27
+
+# ----------------------------
+# Media
+# ----------------------------
+Pillow==10.1.0
+ffmpeg-python==0.2.0
+
+# ----------------------------
+# Email
+# ----------------------------
+fastapi-mail==1.4.1
+
+# ----------------------------
+# Date/Time
+# ----------------------------
+python-dateutil==2.8.2
+
+# ----------------------------
+# Testing
+# ----------------------------
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# ----------------------------
+# Dev Tools
+# ----------------------------
+black==23.11.0
+flake8==6.1.0
+isort==5.12.0
