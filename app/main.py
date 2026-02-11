@@ -254,7 +254,21 @@ async def root() -> dict:
 @app.get("/health", tags=["Health"])
 async def health_check() -> dict:
     """
-    Health check endpoint for load balancers
+    Fast health check endpoint for load balancers
+    Returns immediately without checking dependencies
+    """
+    return {
+        "status": "healthy",
+        "app": settings.APP_NAME,
+        "version": settings.APP_VERSION,
+        "timestamp": asyncio.get_event_loop().time()
+    }
+
+
+@app.get("/health/detailed", tags=["Health"])
+async def health_check_detailed() -> dict:
+    """
+    Detailed health check endpoint
     Checks database and Redis connectivity
     """
     health_status = {
